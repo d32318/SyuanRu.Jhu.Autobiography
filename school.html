@@ -22,9 +22,9 @@
 			//用來紀錄作用中頁籤的頁面ID 預設是第一個頁面
 			var currentDiv = "d1";
 			//用來紀錄預設的顏色
-			var defaultColor = "#FFFFFF";
+			var defaultColor = "#FFFFF2";
 			//用來紀錄各頁籤所要用的顏色值
-			var colorArray = new Array("#FFFF99","#CCFF00","#FFCC00");
+			var colorArray = new Array("#FFFFF2","#FFFFF2","#FFFFF2");
 			//showLayer()函式，參數為觸發該函式的元素、所屬頁面ID及顏色索引
 			function showLayer(obj,div,cIndex){
 				//若目前的currentLayer不等於obj.id 表示要換頁面
@@ -89,16 +89,15 @@
 		
 		<table width="1000" border="0" cellspacing="8" cellpadding="0">
 			<tr align="center">
-			<td class="active" id="cell1" style="background-color:#FFFF99;" onclick="showLayer(this,'d1',0);">高中</td>
+			<td class="active" id="cell1" style="background-color:#FFFFF2;" onclick="showLayer(this,'d1',0);">高中</td>
 			<td class="inactive" id="cell2" onclick="showLayer(this,'d2',1);">大學</td>
 			<td class="inactive" id="cell3" onclick="showLayer(this,'d3',2);">研究所</td>
 			<td style="border-bottom:1px solid #7D7D7D;">&nbsp;</td>
 			</tr>
 		</table>
-		<div id="d1" class="layer" style="display:block;background-color:#FFFF99;">
+		<div id="d1" class="layer" style="display:block;background-color:#FFFFF2;">
 		<!--高中的內容-->
-			<font face="DFKai-sb" size="4"><b><I>國立板橋高級中學</I><b/></font>
-			<br>
+			<img src="http://www.pcsh.ntpc.edu.tw/var/file/0/1000/img/logo-new6.png"><br>
 			<font face="DFKai-sb" size="3"><b><I>2002/09 – 2005/06</I><b/></font>
 			<br>
 			<table style="border:8px #FFD382 groove;" cellpadding="10" border='1'>
@@ -119,8 +118,8 @@
 		</div>
 		<div id="d2" class="layer" style="display:none;">
 		<!--大學的內容-->
-			<font face="DFKai-sb" size="4"><b><I>國立中央大學</I><b/></font><br>
-			<font face="DFKai-sb" size="4"><b><I>資訊工程學系學士</I><b/></font><br>
+			<img src="https://www.ncu.edu.tw/assets/images/logo.gif"><br>
+			<font face="DFKai-sb" size="5"><b><I>資訊工程學系學士&nbsp;</I><b/></font><br>
 			<font face="DFKai-sb" size="3"><b><I>2006/09 – 2010/06</I><b/></font><br>
 			<table style="border:8px #FFD382 groove;" cellpadding="10" border='1'>
 				<tr>
@@ -182,14 +181,10 @@
 		</div>
 		<div id="d3" class="layer" style="display:none;">
 		<!--研究所的內容-->
-			<font face="DFKai-sb" size="4"><b><I>國立台北大學</I><b/></font>
-			<br>
-			<font face="DFKai-sb" size="4"><b><I>分散及行動計算實驗室</I><b/></font>
-			<br>
-			<font face="DFKai-sb" size="4"><b><I>資訊工程學所碩士</I><b/></font>
-			<br>
-			<font face="DFKai-sb" size="3"><b><I>2013/09 – 2015/08</I><b/></font>
-			<br>
+			<img src="https://www.ntpu.edu.tw/chinese/images/home/ntpu-head-logo.png"/><br>
+			<font face="DFKai-sb" size="5"><b><I>分散及行動計算實驗室</I><b/></font><br>
+			<font face="DFKai-sb" size="5"><b><I>資訊工程學所碩士</I><b/></font><br>
+			<font face="DFKai-sb" size="3"><b><I>2013/09 – 2015/08</I><b/></font><br>
 			<table style="border:8px #FFD382 groove;" cellpadding="10" border='1'>
 				<tr>
 					<td>專案/論文</td>
