@@ -24,9 +24,9 @@
 			//用來紀錄作用中頁籤的頁面ID 預設是第一個頁面
 			var currentDiv = "d1";
 			//用來紀錄預設的顏色
-			var defaultColor = "#FFFFFF";
+			var defaultColor = "#FFFFF2";
 			//用來紀錄各頁籤所要用的顏色值
-			var colorArray = new Array("#FFFF99","#CCFF00","#FFCC00");
+			var colorArray = new Array("#FFFFF2","#FFFFF2","#FFFFF2");
 			//showLayer()函式，參數為觸發該函式的元素、所屬頁面ID及顏色索引
 			function showLayer(obj,div,cIndex){
 				//若目前的currentLayer不等於obj.id 表示要換頁面
@@ -101,17 +101,17 @@
 		
 		<table width="1000" border="0" cellspacing="8" cellpadding="0">
 			<tr align="center">
-			<td class="active" id="cell1" style="background-color:#FFFF99;" onclick="showLayer(this,'d1',0);">資拓</td>
-			<td class="inactive" id="cell2" onclick="showLayer(this,'d2',1);">2</td>
-			<td class="inactive" id="cell3" onclick="showLayer(this,'d3',2);">3</td>
+			<td class="active" id="cell1" style="background-color:#FFFFF2;" onclick="showLayer(this,'d1',0);">資拓</td>
+			<!--<td class="inactive" id="cell2" onclick="showLayer(this,'d2',1);">2</td>
+			<td class="inactive" id="cell3" onclick="showLayer(this,'d3',2);">3</td>-->
 			<td style="border-bottom:1px solid #7D7D7D;">&nbsp;</td>
 			</tr>
 		</table>
-		<div id="d1" class="layer" style="display:block;background-color:#FFFF99;">
+		<div id="d1" class="layer" style="display:block;background-color:#FFFFF2;">
 		<!--高中的內容-->
-			<font face="DFKai-sb" size="4"><b><I>資拓宏宇國際(股)公司</I><b/></font>
+			<font face="DFKai-sb" size="5"><b><I>資拓宏宇國際股份有限公司</I><b/></font>
 			<br>
-			<font face="DFKai-sb" size="4"><b><I>軟體開發工程師</I><b/></font>
+			<font face="DFKai-sb" size="5"><b><I>軟體開發工程師</I><b/></font>
 			<br>
 			<font face="DFKai-sb" size="3"><b><I>2015/11 - 在職中</I><b/></font>
 			<br>
@@ -121,22 +121,132 @@
 					<td>內容</td>
 				</tr>
 				<tr>
-					<td>資拓宏宇技術服務部 - SOA技術組(Research&Product Team) (2015/11 - 在職中)</td>
 					<td>
+						<font face="DFKai-sb" size="4"><b>TIBCO 5轉移至TIBCO CE& TIBCO 6之程式換版與整合<b/></font>
+						<br>
+						<font face="DFKai-sb" size="3"><b>2018/09 - 至今<b/></font>
+						<br>
+					</td>
+					<td>
+						<font face="DFKai-sb" size="4"><b>系統概述<b/></font><br>
 						<ul> 
-							<li>撰寫SOA與ESB架構核心系統(2015/11 - 2016/02)</li>
-							<li>王道與新光銀行開發、維護案(2016/03 - 2018/07)</li>
-							<li>硬體 - raspberry pi、Android phone、麵包板、led、按壓式邏輯閘、喇叭</li>
-							<li>作業系統 - Linux、Android</li>
-							<li>通訊 - Wi-Fi direct、NFC、Bluetooth</li>
+							<li>TIBCO推出CE與6的版本，組內決議將現有ESB系統從TIBCO 5轉移至TIBCO CE與TIBCO 6的版本。</li>
+						</ul>
+						<font face="DFKai-sb" size="4"><b>實作方式<b/></font><br>
+						<ul> 
+							<li>分別測試TIBCO CE與TIBCO 6的內建轉換功能，是否能順利將ESB系統從TIBCO 5的版本轉換成功。</li>
+							<li>測試後發現TIBCO CE與TIBCO 6都會自行生出非預期的檔案，為了避免後續出現更多非預期的問題，決議將ESB系統在TIBCO CE上重新建置。</li>
+							<li>先用TIBCO CE建置簡單的shared / application module的web service範例(包括HTTP與EMS兩種通道)。</li>
+							<li>使用SoapUI測試成功。</li>
+							<li>將TIBCO CE的service拿到TIBCO 6的環境開啟轉換成AppSpace。</li>
+							<li>使用SoapUI測試成功。</li>
+							<li>分別打包成ear檔布署到Docker與TEA上。</li>
+							<li>使用SoapUI與Gems測試成功。</li>
+							<li>將ESB系統程式在TIBCO CE上重新建置與測試。</li>
+							<li>TIBCO CE測試完畢，利用2.的步驟轉換至TIBCO 6並測試。</li>
+							<li>分別布署到Docker與TEA上測試成功。</li>
 						</ul>
 					</td>
 				</tr>
 				<tr>
-					<td>1</td>
 					<td>
+						<font face="DFKai-sb" size="4"><b>ESB系統測試程式<b/></font>
+						<br>
+						<font face="DFKai-sb" size="3"><b>2018/01 - 2018/08<b/></font>
+						<br>
+					</td>
+					<td>
+						<font face="DFKai-sb" size="4"><b>系統概述<b/></font><br>
 						<ul> 
-							<li>1</li>
+							<li>ESB系統開發測試過程中發現測試效率的問題，與主管討論後，提出要為公司ESB系統產品設計一套測試程式。</li>
+						</ul>
+						<font face="DFKai-sb" size="4"><b>實作方式<b/></font><br>
+						<ul> 
+							<li>在監控程式開發過程同時思考設計。</li>
+							<li>最後使用TIBCO與Java設計出可對ESB系統所有的流程節點測試的程式，並為現行5個ESB的pattern共設計出84種測試個案，可靈活調整參數達到測試節點的目的。</li>
+							<li>該套程式已被實際應用於ESB組的產品中測試使用，並持續改版維護中。</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="DFKai-sb" size="4"><b>ESB系統運作過程的資源監控系統<b/></font>
+						<br>
+						<font face="DFKai-sb" size="3"><b>2018/01 - 2018/08<b/></font>
+						<br>
+					</td>
+					<td>
+						<font face="DFKai-sb" size="4"><b>系統概述<b/></font><br>
+						<ul> 
+							<li>ESB系統執行過程中會記錄log，資源監控系統會監控電腦資源使用狀況、service執行狀況、其中也包括service的連線位置等資訊的設置。</li>
+						</ul>
+						<font face="DFKai-sb" size="4"><b>實作方式<b/></font><br>
+						<ul> 
+							<li>使用Java(Spring MVC)撰寫後臺程式，使用Ajax與jQuery撰寫監控系統UI介面，log和連線位置等紀錄在oracle資料庫內。</li>
+							<li>可以在UI介面上選擇要查詢的service資訊(包括ServiceDomain、Operation、UUID、執行時間等)，後臺程式收到訊息後會使用sql語法去資料庫查回對應資料內容，並傳回到UI介面上顯示(呈現方式為資料表格或圖表)。</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="DFKai-sb" size="4"><b>王道商業銀行開發案、維護案<b/></font>
+						<br>
+						<font face="DFKai-sb" size="3"><b>開發案(2016/03 - 2017/12)<b/></font>
+						<br>
+						<font face="DFKai-sb" size="3"><b>維護案(2018/01 - 2018/07)<b/></font>
+						<br>
+					</td>
+					<td>
+						<font face="DFKai-sb" size="4"><b>系統概述<b/></font><br>
+						<ul> 
+							<li>王道銀行(原台灣工業銀行)轉型成純網銀，該開發案以個金系統為主，前後台各系統都以ESB系統為中介點串接，ESB系統進行前後臺系統資料欄位應對與格式轉換，並依服務進行一對一或一對多的交易流程處理。</li>
+						</ul>
+						<font face="DFKai-sb" size="4"><b>實作方式<b/></font><br>
+						<ul> 
+							<li>規劃ESB團隊(SA、PG)透過SVN版控軟體進行協同開發流程 (2016/03)。</li>
+							<li>使用TIBCO與Java開發ESB核心系統，包含一對一與一對多的服務。</li>
+							<li>將開發完的服務打包成ear檔，布署到dev環境的Administrator上進行測試。</li>
+							<li>針對UAT環境壓力測試。</li>
+							<li>開發案期間對客戶與資拓工程師進行數次程式開發教育訓練。</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="DFKai-sb" size="4"><b>新光銀行開發案<b/></font>
+						<br>
+						<font face="DFKai-sb" size="3"><b>2017/04 - 2017/07<b/></font>
+						<br>
+					</td>
+					<td>
+						<font face="DFKai-sb" size="4"><b>系統概述<b/></font><br>
+						<ul> 
+							<li>因為新光銀行已經有既有的前後台且資料傳輸方式為TCP/IP，故要使用ESB系統需使用Adapter當傳輸資料的中介點。</li>
+						</ul>
+						<font face="DFKai-sb" size="4"><b>實作方式<b/></font><br>
+						<ul> 
+							<li>使用TIBCO與Java開發Adapter，其中以TCP/IP的方式進行資料傳輸。</li>
+							<li>因新光銀行無法再開資料庫表格，故ESB系統部分內容由讀取資料庫改寫成讀檔方式運行。</li>
+							<li>因新光銀行資料傳輸時的XML內容不帶namespace，故要符合ESB系統傳輸格式，需在adapter層先將namespace透過Java寫的程式加到XML內。</li>
+							<li>開教育訓練會議帶領客戶工程師使用TIBCO與ESB系統進行程式開發。</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<font face="DFKai-sb" size="4"><b>SOA與ESB架構核心系統<b/></font>
+						<br>
+						<font face="DFKai-sb" size="3"><b>2015/11-2016/02<b/></font>
+						<br>
+					</td>
+					<td>
+						<font face="DFKai-sb" size="4"><b>系統概述<b/></font><br>
+						<ul> 
+							<li>該產品主要為串接前後台的中介者，使前後台開發人員在處理通訊協定與資料傳輸格式單一化，ESB系統可根據前後台特定欄位資料內容得知接發訊息的對象，並透過Adapter轉為前後台對應的資料傳輸格式並傳送。</li>
+						</ul>
+						<font face="DFKai-sb" size="4"><b>實作方式<b/></font><br>
+						<ul> 
+							<li>使用TIBCO、Java、資料庫和Web Service開發工具，開發與測試SOA與ESB系統的產品。</li>
 						</ul>
 					</td>
 				</tr>
@@ -174,21 +284,21 @@
 		.active {
 			border: 1px solid #7D7D7D;
 			border-bottom: none;
-			width:	1000;
+			width:	1300;
 			cursor:pointer;
 		}
 		/* inactive樣式是給未選取頁籤用的 */
 		.inactive {
 			border: none;
 			border-bottom: 1px solid #7D7D7D;
-			width:	1000;
+			width:	1300;
 			cursor:pointer;
 		}
 		/* layer樣式是給DIV用的 */
 		.layer {
 			border: 1px solid #7D7D7D;
 			border-top: none;
-			width:	1000;
+			width:	1300;
 			//height:	200;
 		}
 		</style>
