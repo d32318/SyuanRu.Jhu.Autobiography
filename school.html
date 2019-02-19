@@ -3,7 +3,6 @@
 		<meta charset="UTF-8" />
 		<title>SyuanRu, Jhu school</title>
 		<script>
-		
 			today = new Date();			// 產生日期物件
 			year = today.getFullYear();
 			month = today.getMonth() + 1;
@@ -17,6 +16,43 @@
 					  + "\n這兒除了學校還包含我的專案與社團經歷。";	// 連接字串
 					  
 		</script>
+		<script type="text/javascript">
+			//用來紀錄作用中頁籤的ID 預設是第一個頁籤
+			var currentLayer = "cell1";
+			//用來紀錄作用中頁籤的頁面ID 預設是第一個頁面
+			var currentDiv = "d1";
+			//用來紀錄預設的顏色
+			var defaultColor = "#FFFFFF";
+			//用來紀錄各頁籤所要用的顏色值
+			var colorArray = new Array("#FFFF99","#CCFF00","#FFCC00");
+			//showLayer()函式，參數為觸發該函式的元素、所屬頁面ID及顏色索引
+			function showLayer(obj,div,cIndex){
+				//若目前的currentLayer不等於obj.id 表示要換頁面
+				if(currentLayer!=obj.id) {
+					//先改變上一個頁籤及頁面的樣式
+					showIt(currentLayer,currentDiv,cIndex,false);
+					//重設currentLayer及currentDiv的值
+					currentLayer = obj.id;
+					currentDiv = div;
+					//最後再改變目前頁籤及頁面的樣式
+					showIt(currentLayer,currentDiv,cIndex,true);
+				}
+			}
+			//showIt()函式，參數為currentLayer、currentDiv、colorArray的索引及模式
+			//mode為true時 則表示目前作用中 所以要顯示
+			//mode為false時 則表示目前非作用中 所以要隱藏
+			function showIt(o,d,cIndex,mode){
+				var obj = document.getElementById(o);
+				var div = document.getElementById(d);
+				//改變className則表示改變該元素所用的class
+				obj.className = mode?"active":"inactive";
+				div.style.display = mode?"block":"none";
+				//改變頁籤及頁面的背景顏色
+				obj.style.backgroundColor = mode?colorArray[cIndex]:defaultColor;
+				div.style.backgroundColor = mode?colorArray[cIndex]:defaultColor;
+				//可以直接寫div.style.backgroundColor = colorArray[cIndex]
+			}
+		</script>
 		<style>
 			#img1 {
 				display: none;
@@ -24,15 +60,6 @@
 		</style>
 	</head>
 	<body>
-		<!--<form action="" method="post" name="formAdd" id="formAdd">
-			請輸入姓名：<input type="text" name="cName" id="cName"><br/>
-			請輸入生日：<input type="date" name="cBirthday" id="cBirthday"><br/>
-			請輸入Email：<input type="text" name="cEmail" id="cEmail"><br/>
-			<input type="hidden" name="action" value="add">
-			<input type="submit" name="button" value="新增資料">
-			<input type="reset" name="button2" value="重新填寫">
-		</form>-->
-		
 		<script>
 			
 			alert(string);
@@ -59,6 +86,89 @@
 		</ul>
 		<br>
 		</div>
+		
+		<table width="1000" border="0" cellspacing="8" cellpadding="0">
+			<tr align="center">
+			<td class="active" id="cell1" style="background-color:#FFFF99;" onclick="showLayer(this,'d1',0);">高中</td>
+			<td class="inactive" id="cell2" onclick="showLayer(this,'d2',1);">大學</td>
+			<td class="inactive" id="cell3" onclick="showLayer(this,'d3',2);">研究所</td>
+			<td style="border-bottom:1px solid #7D7D7D;">&nbsp;</td>
+			</tr>
+		</table>
+		<div id="d1" class="layer" style="display:block;background-color:#FFFF99;">
+		<!--高中的內容-->
+			<font face="DFKai-sb" size="4"><b><I>國立板橋高級中學</I><b/></font>
+			<br>
+			<font face="DFKai-sb" size="3"><b><I>2002/09 – 2005/06</I><b/></font>
+			<br>
+			<table style="border:8px #FFD382 groove;" cellpadding="10" border='1'>
+				<tr><td>社團</td><td>內容</td></tr>
+				<tr><td>藍嵐書香社</td><td>副社長</td></tr>
+			</table>
+		</div>
+		<div id="d2" class="layer" style="display:none;">
+		<!--大學的內容-->
+			<font face="DFKai-sb" size="4"><b><I>國立中央大學</I><b/></font>
+			<br>
+			<font face="DFKai-sb" size="4"><b><I>資訊工程學系學士</I><b/></font>
+			<br>
+			<font face="DFKai-sb" size="3"><b><I>2006/09 – 2010/06</I><b/></font>
+			<br>
+			<table style="border:8px #FFD382 groove;" cellpadding="10" border='1'>
+				<tr><td>專案/論文</td><td>內容</td></tr>
+				<tr><td>程式設計競賽 - 中央大學第一屆自走車設計競賽 (2009)</td><td>佳作</td></tr>
+				<tr><td>中央大學專題競賽 - 多媒體數位學習導覽機器人(2010)</td><td>佳作</td></tr>
+			</table>
+			<br>
+			<table style="border:8px #FFD382 groove;" cellpadding="10" border='1'>
+				<tr><td>社團</td><td>內容</td></tr>
+				<tr><td>領袖社</td><td>營隊活動部長(大一)</td></tr>
+				<tr><td>全校運動會</td><td>資工系趣味競賽組長(大二)</td></tr>
+				<tr><td>資工系系運會</td><td>執行長(大三)</td></tr>
+			</table>
+		</div>
+		<div id="d3" class="layer" style="display:none;">
+		<!--研究所的內容-->
+			<font face="DFKai-sb" size="4"><b><I>國立台北大學</I><b/></font>
+			<br>
+			<font face="DFKai-sb" size="4"><b><I>分散及行動計算實驗室</I><b/></font>
+			<br>
+			<font face="DFKai-sb" size="4"><b><I>資訊工程學所碩士</I><b/></font>
+			<br>
+			<font face="DFKai-sb" size="3"><b><I>2013/09 – 2015/08</I><b/></font>
+			<br>
+			<table style="border:8px #FFD382 groove;" cellpadding="10" border='1'>
+				<tr><td>專案/論文</td><td>內容</td></tr>
+				<tr><td>音律電子</td><td>產學合作</td></tr>
+				<tr><td>畢業論文</td><td>以代理人為基礎具期限的工作流排程機制</td></tr>
+			</table>
+		</div>
+		
+		<style>
+		/* active樣式是給目前所選取頁籤用的 */
+		.active {
+			border: 1px solid #7D7D7D;
+			border-bottom: none;
+			width:	1000;
+			cursor:pointer;
+		}
+		/* inactive樣式是給未選取頁籤用的 */
+		.inactive {
+			border: none;
+			border-bottom: 1px solid #7D7D7D;
+			width:	1000;
+			cursor:pointer;
+		}
+		/* layer樣式是給DIV用的 */
+		.layer {
+			border: 1px solid #7D7D7D;
+			border-top: none;
+			width:	1000;
+			//height:	200;
+		}
+		</style>
+		
+		<br><input type ="button" onclick="javascript:location.href='https://d32318.github.io/SyuanRu.Jhu.Autobiography/'" value="首頁"></input>
 		
 		<br><input type ="button" onclick="javascript:location.href='https://d32318.github.io/SyuanRu.Jhu.Autobiography/school.html'" value="我的學歷"></input>
 		
