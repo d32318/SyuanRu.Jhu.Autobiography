@@ -2,6 +2,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>SyuanRu, Jhu</title>
+		<script>
+		
+			today = new Date();			// 產生日期物件
+			year = today.getFullYear();
+			month = today.getMonth() + 1;
+			date = today.getDate();
+			hour = today.getHours();		// 取得時數
+			minute = today.getMinutes();		// 取得分數
+			//second = today.getSeconds();		// 取得秒數
+			string = "現在時間是：" + year + " 年 " + month + " 月 " + date + " 日 " 
+			          + hour + " 時 " + minute + " 分 "
+					  + "\n歡迎來到我的空間，希望在這能讓您更了解我！";	// 連接字串
+					  
+		</script>
+		<style>
+			#img1 {
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<!--<form action="" method="post" name="formAdd" id="formAdd">
@@ -14,38 +33,55 @@
 		</form>-->
 		
 		<script>
-			today = new Date();			// 產生日期物件
-			year = today.getFullYear();
-			month = today.getMonth() + 1;
-			date = today.getDate();
-			hour = today.getHours();		// 取得時數
-			minute = today.getMinutes();		// 取得分數
-			second = today.getSeconds();		// 取得秒數
-			string = "現在時間是：" + year + "年" + month + "月" + date + "日" 
-			          + hour + "時" + minute + "分" + second + "秒"
-					  + "\n歡迎來到我的空間，希望在這能讓您更了解我！";	// 連接字串
+			
 			alert(string);
+			
 		</script>
 		
-		<img src="http://0rz.tw/nTVrs" alt="大頭貼照">
-		<p>朱璿儒(David Jhu)</p>
-		<ul> 
-			<li>居住地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;台北市</li>
-			<li>出生日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1986/09/23</li>
-			<li>電子郵件&nbsp;&nbsp;&nbsp;&nbsp;d32318@gmail.com</li>
-			<li>聯絡電話&nbsp;&nbsp;&nbsp;&nbsp;+886-911-310235</li>
-			<li>兵役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;陸軍役畢(2010/07 – 2011/06)</li>
-		</ul>
-		<br><a href=https://www.linkedin.com/in/syuanru-jhu/>My Linkedin</a>
+		<font face="DFKai-sb" color="red" size="6">樂於學習、自我精進、教學相長</font>
 		<br>
 		
+		<form>
+		<div style= "width: 100%; background-color: #30FFFF; border: 0px solid #333; padding: 0px; margin: 0px auto;">
+			<img src="http://0rz.tw/nTVrs" alt="大頭貼照">
+			<font face="DFKai-sb" size="6"><b><I>朱璿儒(David Jhu)</I><b/></font>
+		</div>
+		</form>
 		
-		<div data-video="H9G1cAdfpxo"  
+		<!--個人資料-->
+		<br>
+		<div style="border-width:3px;border-style:dashed;border-color:#4F4FFF;padding:5px;">
+			<ul> 
+				<li>居住地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;台北市</li>
+				<li>出生日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1986/09/23</li>
+				<li>電子郵件&nbsp;&nbsp;&nbsp;&nbsp;d32318@gmail.com</li>
+				<li>聯絡電話&nbsp;&nbsp;&nbsp;&nbsp;+886-911-310235</li>
+				<li>兵役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;陸軍役畢(2010/07 – 2011/06)</li>
+		</ul>
+		<br>
+		</div>
+		
+		<br><a href=https://www.linkedin.com/in/syuanru-jhu/>My Linkedin</a>
+		<!--<div data-video="H9G1cAdfpxo"  
 			data-autoplay="1"         
 			data-loop="1"             
 			id="youtube-audio">
 		</div>
 		<script src="https://www.youtube.com/iframe_api"></script>
-		<script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+		<script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>-->
+		
+		<div class="container">
+		<div class="card">
+			<div class="card-header"></div>
+			<div class="card-body">
+				<!-- 每頁不同的內容從這裡開始 -->
+				<img src="ajax-loader.gif" id="img1"> 
+				<input type="button" value="Load" id="buttonLoad">
+
+				<div id="div1"></div>
+				<!-- 每頁不同的內容到這裡結束 -->
+			</div>
+		</div>
+	</div>
 	</body>
 </html>
